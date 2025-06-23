@@ -3,7 +3,6 @@ const getWeatherBtn = document.getElementById('get-weather-btn');
 const weatherInfoDiv = document.getElementById('weather-info');
 const errorMessageDiv = document.getElementById('error-message');
 
-// GANTI DENGAN KUNCI API OPENWEATHERMAP.ORG MILIKMU!
 const API_KEY = '7c8c6bb0b55342441588a7f174379b57'; 
 
 getWeatherBtn.addEventListener('click', () => {
@@ -31,13 +30,13 @@ async function getWeatherData(city) {
         displayWeather(data);
     } catch (error) {
         displayError(error.message);
-        console.error('Ada masalah saat mengambil data cuaca:', error); // Untuk debugging
+        console.error('Ada masalah saat mengambil data cuaca:', error); 
     }
 }
 
 function displayWeather(data) {
-    weatherInfoDiv.innerHTML = ''; // Bersihkan info sebelumnya
-    errorMessageDiv.style.display = 'none'; // Sembunyikan pesan error
+    weatherInfoDiv.innerHTML = ''; 
+    errorMessageDiv.style.display = 'none';
 
     const { name, main, weather, wind } = data;
     const temperature = main.temp;
@@ -45,7 +44,7 @@ function displayWeather(data) {
     const humidity = main.humidity;
     const description = weather[0].description;
     const iconCode = weather[0].icon;
-    const windSpeed = wind.speed; // Kecepatan angin dalam meter/detik (default OpenWeatherMap)
+    const windSpeed = wind.speed; 
 
     const weatherHtml = `
         <h2>${name}</h2>
@@ -57,11 +56,11 @@ function displayWeather(data) {
     `;
 
     weatherInfoDiv.innerHTML = weatherHtml;
-    weatherInfoDiv.style.display = 'block'; // Tampilkan info cuaca
+    weatherInfoDiv.style.display = 'block'; 
 }
 
 function displayError(message) {
-    weatherInfoDiv.style.display = 'none'; // Sembunyikan info cuaca
+    weatherInfoDiv.style.display = 'none';
     errorMessageDiv.textContent = message;
-    errorMessageDiv.style.display = 'block'; // Tampilkan pesan error
+    errorMessageDiv.style.display = 'block';
 }
