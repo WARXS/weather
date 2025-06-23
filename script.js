@@ -10,7 +10,7 @@ getWeatherBtn.addEventListener('click', () => {
     if (city) {
         getWeatherData(city);
     } else {
-        displayError('Tolong masukkan nama kota, sayang.');
+        displayError('Tolong masukkan nama kota.');
     }
 });
 
@@ -21,7 +21,7 @@ async function getWeatherData(city) {
         const response = await fetch(url);
         if (!response.ok) {
             if (response.status === 404) {
-                throw new Error('Kota tidak ditemukan. Periksa ejaanmu, sayang.');
+                throw new Error('Kota tidak ditemukan. Periksa ejaanmu.');
             } else {
                 throw new Error(`Terjadi kesalahan: ${response.statusText}`);
             }
