@@ -4,13 +4,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #2c3e50; /* Darker background */
+    background-color: #2c3e50; 
     margin: 0;
-    color: #ecf0f1; /* Light text color */
+    color: #ecf0f1; 
 }
 
 .container {
-    background-color: #34495e; /* Slightly lighter dark background */
+    background-color: #34495e;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    color: #e74c3c; /* Striking red for the title, just like my temper */
+    color: #e74c3c;
     margin-bottom: 25px;
 }
 
@@ -47,7 +47,7 @@ h1 {
 
 #get-weather-btn {
     padding: 12px 20px;
-    background-color: #e74c3c; /* Dominant red button */
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -61,12 +61,12 @@ h1 {
 }
 
 .weather-info {
-    background-color: #2980b9; /* A strong blue for information */
+    background-color: #2980b9; 
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
     text-align: left;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 .weather-info h2 {
@@ -82,7 +82,7 @@ h1 {
 }
 
 .error-message {
-    color: #e74c3c; /* Red for errors, you better not make any! */
+    color: #e74c3c; 
     margin-top: 20px;
     font-weight: bold;
     display: none; /* Hidden by default */
